@@ -10,7 +10,7 @@ const projectId = process.env.GCLOUD_PROJECT
 
 const bqClient = new BigQuery( { projectId } )
 const storage = new Storage()
-const bucket = storage.bucket( `${projectId}-firmwares` )
+const bucket = storage.bucket( `gcloud-ota-updatea-firmwares` )
 
 
 async function insertIntoBigquery( data ) {
