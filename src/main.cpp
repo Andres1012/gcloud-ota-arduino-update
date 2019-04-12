@@ -175,7 +175,7 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
 
   delay(3000);
-  Serial.println("\n Starting");
+  Serial.println("\n Iniciando...");
   // Setup Wifi Manager
   String version = String("<p>Current Version - v") + String(CURRENT_VERSION) + String("</p>");
   USE_SERIAL.println(version);
@@ -222,7 +222,7 @@ void loop()
   if (currentMillis - previousMillis >= interval) {    
     previousMillis = currentMillis;
     ledState = ledState == LOW ? HIGH : LOW;
-    digitalWrite( BUILTIN_LED, ledState );
+    digitalWrite( LED_BUILTIN, ledState );
   }
   
   // Just chill
